@@ -35,7 +35,7 @@ The Website Monitoring Automation with Boto3 project is a Python-based system de
     pip3 install requests schedule paramiko linode_api4
     ```
 
-3. ***Set up environment variables:***
+3. **Set up environment variables:**
     - `LINODE_TOKEN`: Your Linode API token.
     - `EMAIL_ADDRESS`: Your email address used for sending notifications.
     - `EMAIL_PASSWORD`: Your email password.
@@ -43,17 +43,17 @@ The Website Monitoring Automation with Boto3 project is a Python-based system de
 
 ## Configuration
 
-1. Update the application URL in `monitor_application` function:
+1. **Update the application URL in `monitor_application` function:**
     ```python
     response = requests.get('<server-url>')
     ```
 
-2. Update the server details in `restart_docker_container` function:
+2. **Update the server details in `restart_docker_container` function:**
     ```python
     ssh.connect(hostname='<server-ip>', username='root', key_filename='<public-ssh-key-path>')
     ```
 
-3. Update the Linode server ID in `restart_linode_server` function:
+3. **Update the Linode server ID in `restart_linode_server` function:**
     ```python
     server = client.load(linode_api4.Instance, '<linode-id>')
     ```
@@ -61,12 +61,12 @@ The Website Monitoring Automation with Boto3 project is a Python-based system de
 
 ## Usage
 
-1. ***Run the monitor script:***
+1. **Run the monitor script:**
     ```bash
     python monitor_application.py
     ```
 
-2. ***The script will:***
+2. **The script will:**
     - Check the application status every 5 seconds.
     - Send a notification if the application is down.
     - Restart the application if it is not responding.
@@ -87,9 +87,9 @@ This script monitors the application's status and takes appropriate actions if t
     - Sends a notification after a successful restart.
     - Function: restart_linode_server()
 
--Reboots the Linode server.
+- Reboots the Linode server.
     -Waits until the server is fully running.
     -Sends a notification after a successful reboot.
-    
--Function: send_gmail_notification()
+
+- Function: send_gmail_notification()
     -Sends an email notification using Gmail's SMTP server.
