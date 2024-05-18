@@ -88,8 +88,8 @@ This script monitors the application's status and takes appropriate actions if t
     
 - **Function: restart_linode_server()**
     - Reboots the Linode server.
-    -Waits until the server is fully running.
-    -Sends a notification after a successful reboot.
+    - Waits until the server is fully running.
+    - Sends a notification after a successful reboot.
 
 - **Function: send_gmail_notification()**
-    -Sends an email notification using Gmail's SMTP server.
+    - Sends an email notification using Gmail's SMTP server.
