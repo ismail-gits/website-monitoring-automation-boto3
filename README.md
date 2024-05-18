@@ -76,20 +76,20 @@ The Website Monitoring Automation with Boto3 project is a Python-based system de
 `monitor_application.py`
 This script monitors the application's status and takes appropriate actions if the application is down.
 
-- Function: monitor_application()
+- **Function: monitor_application()**
     - Checks if the application is up.
     - Sends a notification and restarts the application if it is down.
     - If there is a connection error, sends a notification, reboots the server, and restarts the application.
-    - Function: restart_docker_container()
-
-- Connects to the server via SSH.
+    
+- **Function: restart_docker_container()**
+    - Connects to the server via SSH.
     - Restarts the Docker container running the application.
     - Sends a notification after a successful restart.
-    - Function: restart_linode_server()
-
-- Reboots the Linode server.
+    
+- **Function: restart_linode_server()**
+    - Reboots the Linode server.
     -Waits until the server is fully running.
     -Sends a notification after a successful reboot.
 
-- Function: send_gmail_notification()
+- **Function: send_gmail_notification()**
     -Sends an email notification using Gmail's SMTP server.
